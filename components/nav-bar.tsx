@@ -1,4 +1,4 @@
-import { Tabs, useTheme, Text } from '@geist-ui/core'
+import { Tabs, useTheme, Text, Avatar } from '@geist-ui/core'
 import { useRouter } from 'next/router'
 import TabBar from './tab-bar'
 
@@ -9,7 +9,10 @@ function NavBar() {
         <>
             <div className='NavBar__wrapper'>
                 <div className='NavBar__inner'>
-                    <Text>Hi</Text>
+                    <Text>Vercel</Text>
+                    <div className='NavBar__actions'>
+                        <Avatar my="auto" />
+                    </div>
                 </div>
             </div>
             <TabBar />
@@ -22,6 +25,12 @@ function NavBar() {
                     margin: 0 auto;
                     padding: 0 ${theme.layout.pageMargin};
                     width: ${theme.layout.pageWidthWithMargin};
+                    display: flex;
+                    justify-content: space-between;
+                    alaign-items: center;
+                }
+                .NavBar__actions {
+                    display: flex;
                 }
             `}</style>
         </>
